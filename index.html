@@ -183,17 +183,17 @@
 					for (let imgdata of track.image) {
 						img = imgdata["#text"];
 					}
-					if (img != "") {
+					if (img == "") {
 						let art = track.artist;
 						img = art.image[0]["#text"];
 						for (let imgdata of art.image) {
 							img = imgdata["#text"];
 						}
 					}
-					if (img == "") {
+					//if (img == "") {
 						// Seems to be the default "no image" logo.
-						img = "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
-					}
+					//	img = "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
+					//}
 					imgcache.src = img;
 
 					let el_info = document.querySelector(".info");
